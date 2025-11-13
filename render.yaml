@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: car-rental-system
+    plan: free
+    buildCommand: "dotnet publish -c Release -o out"
+    startCommand: "dotnet out/CarRentalSystem.WebAPI.dll"

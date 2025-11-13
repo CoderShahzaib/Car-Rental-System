@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="render.yaml" />
+  </Folder>
   <Project Path="CarRentalSystem.Core/CarRentalSystem.Core.csproj" />
   <Project Path="CarRentalSystem.WebAPI/CarRentalSystem.WebAPI.csproj" />
 </Solution>

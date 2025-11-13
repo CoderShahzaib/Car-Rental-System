@@ -1,5 +1,4 @@
-
-using CarRentalSystem.Core.DatabaseContext;
+﻿using CarRentalSystem.Core.DatabaseContext;
 using CarRentalSystem.Core.Identity;
 using CarRentalSystem.Core.ServiceContracts;
 using CarRentalSystem.Services;
@@ -7,14 +6,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Services
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"),
-    sql => sql.MigrationsAssembly("CarRentalSystem.WebAPI")
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sql => sql.MigrationsAssembly("CarRentalSystem.WebAPI")
     ));
 
 builder.Services.AddTransient<IJwtService, JwtService>();
@@ -33,7 +33,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
-// CORS (optional)
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
@@ -46,25 +46,26 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// 🌍 Important: Configure Render's dynamic PORT
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls.Add($"http://*:{port}");
+
 // Middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// ❌ Remove HTTPS redirection (Render handles HTTP)
 app.UseStaticFiles();
 app.UseRouting();
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Swagger only in development
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// ✅ Always keep Swagger on for testing on Render
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllers();
 
