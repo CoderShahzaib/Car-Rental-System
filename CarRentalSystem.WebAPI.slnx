@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CarRentalSystem.Core/CarRentalSystem.Core.csproj" />
+  <Project Path="CarRentalSystem.WebAPI/CarRentalSystem.WebAPI.csproj" />
+</Solution>
