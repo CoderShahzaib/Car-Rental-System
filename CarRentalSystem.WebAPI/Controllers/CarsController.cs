@@ -1,5 +1,4 @@
-﻿
-using CarRentalSystem.Core.DatabaseContext;
+﻿using CarRentalSystem.Core.DatabaseContext;
 using CarRentalSystem.Core.DTOs;
 using CarRentalSystem.Core.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -7,8 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CarRentalSystem.WebAPI.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
     public class CarsController : CustomControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -23,18 +20,25 @@ namespace CarRentalSystem.WebAPI.Controllers
         {
             var cars = await _context.Cars
                 .AsNoTracking()
-                .Select(c => new CarDTO
+                .Select(c => new
                 {
-                    Id = c.Id,
-                    Brand = c.Brand,
-                    Model = c.Model,
-                    DailyRate = c.DailyRate,
-                    Color = c.Color,
-                    Image = c.Image
+                    carId = c.Id,
+                    brand = c.Brand,
+                    model = c.Model,
+                    year = c.Year,
+                    color = c.Color,
+                    dailyRate = c.DailyRate,
+                    carImage = c.Image,
+                    registrationNo = c.RegistrationNo
                 })
                 .ToListAsync();
 
-            return Ok(cars);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "",
+                Result = true,
+                Data = cars
+            });
         }
 
         [HttpGet("{id}")]
@@ -43,28 +47,53 @@ namespace CarRentalSystem.WebAPI.Controllers
             var car = await _context.Cars
                 .AsNoTracking()
                 .Where(c => c.Id == id)
-                .Select(c => new CarDTO
+                .Select(c => new
                 {
-                    Id = c.Id,
-                    Brand = c.Brand,
-                    Model = c.Model,
-                    DailyRate = c.DailyRate,
-                    Color = c.Color,
-                    Image = c.Image
+                    carId = c.Id,
+                    brand = c.Brand,
+                    model = c.Model,
+                    year = c.Year,
+                    color = c.Color,
+                    dailyRate = c.DailyRate,
+                    carImage = c.Image,
+                    registrationNo = c.RegistrationNo
                 })
                 .FirstOrDefaultAsync();
 
             if (car == null)
-                return NotFound(new { message = $"Car with ID {id} not found." });
+                return NotFound(new ApiResponse<object>
+                {
+                    Message = $"Car with ID {id} not found.",
+                    Result = false,
+                    Data = null
+                });
 
-            return Ok(car);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "",
+                Result = true,
+                Data = car
+            });
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateCar([FromBody] CreateCarDTO carDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var firstError = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .FirstOrDefault();
+
+                return BadRequest(new ApiResponse<object>
+                {
+                    Message = firstError ?? "Validation failed",
+                    Result = false,
+                    Data = null
+                });
+            }
+
 
             var car = new Car
             {
@@ -74,47 +103,68 @@ namespace CarRentalSystem.WebAPI.Controllers
                 Color = carDTO.Color,
                 DailyRate = carDTO.DailyRate,
                 RegistrationNo = carDTO.RegistrationNo,
-                Image = carDTO.Image
+                Image = carDTO.carImage
             };
 
             _context.Cars.Add(car);
             await _context.SaveChangesAsync();
 
-            var result = new CarDTO
+            var data = new
             {
-                Id = car.Id,
-                Brand = car.Brand,
-                Model = car.Model,
-                DailyRate = car.DailyRate,
-                Color = car.Color,
-                Image = car.Image
+                carId = car.Id,
+                brand = car.Brand,
+                model = car.Model,
+                year = car.Year,
+                color = car.Color,
+                dailyRate = car.DailyRate,
+                carImage = car.Image,
+                registrationNo = car.RegistrationNo
             };
 
-            return CreatedAtAction(nameof(GetCar), new { id = car.Id }, result);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "Car created successfully",
+                Result = true,
+                Data = data
+            });
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCar(int id, [FromBody] CreateCarDTO carDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return BadRequest(new ApiResponse<object>
+                {
+                    Message = "Invalid data",
+                    Result = false,
+                    Data = ModelState
+                });
 
             var existingCar = await _context.Cars.FindAsync(id);
             if (existingCar == null)
-                return NotFound(new { message = $"Car with ID {id} not found." });
+                return NotFound(new ApiResponse<object>
+                {
+                    Message = $"Car with ID {id} not found.",
+                    Result = false,
+                    Data = null
+                });
 
-            // Update properties
             existingCar.Brand = carDTO.Brand;
             existingCar.Model = carDTO.Model;
             existingCar.Year = carDTO.Year;
             existingCar.Color = carDTO.Color;
             existingCar.DailyRate = carDTO.DailyRate;
             existingCar.RegistrationNo = carDTO.RegistrationNo;
-            existingCar.Image = carDTO.Image;
+            existingCar.Image = carDTO.carImage;
 
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new ApiResponse<object>
+            {
+                Message = "Car updated successfully",
+                Result = true,
+                Data = existingCar
+            });
         }
 
         [HttpDelete("{id}")]
@@ -122,12 +172,22 @@ namespace CarRentalSystem.WebAPI.Controllers
         {
             var car = await _context.Cars.FindAsync(id);
             if (car == null)
-                return NotFound(new { message = $"Car with ID {id} not found." });
+                return NotFound(new ApiResponse<object>
+                {
+                    Message = $"Car with ID {id} not found.",
+                    Result = false,
+                    Data = null
+                });
 
             _context.Cars.Remove(car);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return Ok(new ApiResponse<object>
+            {
+                Message = "Car deleted successfully",
+                Result = true,
+                Data = new { deletedCarId = id }
+            });
         }
     }
 }

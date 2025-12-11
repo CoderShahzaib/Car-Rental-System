@@ -12,6 +12,6 @@
 
         public string Color { get; set; }
 
-        public string Image { get; set; }
+        public string carImage { get; set; }
     }
 }

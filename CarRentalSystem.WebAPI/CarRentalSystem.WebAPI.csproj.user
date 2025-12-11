@@ -2,5 +2,6 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>https</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Lenovo\source\repos\CarRentalSystem.WebAPI\CarRentalSystem.WebAPI\Properties\PublishProfiles\site46558-WebDeploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

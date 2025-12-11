@@ -9,18 +9,18 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace CarRentalSystem.WebAPI.Migrations
+namespace CarRentalSystem.Core.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251113061131_Initial")]
-    partial class Initial
+    [Migration("20251210155954_ResetIdentityCounters")]
+    partial class ResetIdentityCounters
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.0")
+                .HasAnnotation("ProductVersion", "10.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -189,6 +189,7 @@ namespace CarRentalSystem.WebAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("DailyRate")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Image")

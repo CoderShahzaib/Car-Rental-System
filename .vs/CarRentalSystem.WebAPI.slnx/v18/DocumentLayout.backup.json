@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6D39644D-5670-4AAF-BC60-6B86AF53D731}|Solution Items{6D39644D-5670-4AAF-BC60-6B86AF53D731}|C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\ggg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D39644D-5670-4AAF-BC60-6B86AF53D731}|Solution Items{6D39644D-5670-4AAF-BC60-6B86AF53D731}|solutionrelative:ggg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\controllers\\bookingscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.core\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|solutionrelative:carrentalsystem.core\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.core\\dtos\\createcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|solutionrelative:carrentalsystem.core\\dtos\\createcardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.core\\dtos\\cardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA861D1C-34BF-85B0-E142-B2A0920F1B6D}|CarRentalSystem.Core\\CarRentalSystem.Core.csproj|solutionrelative:carrentalsystem.core\\dtos\\cardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|c:\\users\\lenovo\\source\\repos\\carrentalsystem.webapi\\carrentalsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2A4F8FD-CE3C-D22D-BB52-3E3671809B67}|CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI.csproj|solutionrelative:carrentalsystem.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,20 +54,151 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ggg.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\ggg.cs",
+              "RelativeDocumentMoniker": "ggg.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\ggg.cs",
+              "RelativeToolTip": "ggg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T13:26:57.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.Development.json",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T13:03:00.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\appsettings.Production.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.Production.json",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\appsettings.Production.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T13:02:39.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\appsettings.json",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\appsettings.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA1wAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-11T13:02:26.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.Core\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\Entities\\Booking.cs",
+              "RelativeToolTip": "CarRentalSystem.Core\\Entities\\Booking.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T10:17:18.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CarDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\DTOs\\CarDTO.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.Core\\DTOs\\CarDTO.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\DTOs\\CarDTO.cs",
+              "RelativeToolTip": "CarRentalSystem.Core\\DTOs\\CarDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T17:03:03.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateCarDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\DTOs\\CreateCarDTO.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.Core\\DTOs\\CreateCarDTO.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.Core\\DTOs\\CreateCarDTO.cs",
+              "RelativeToolTip": "CarRentalSystem.Core\\DTOs\\CreateCarDTO.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T17:02:49.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAA7wBUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T15:06:37.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\Controllers\\CarsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T06:40:24.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingsController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\BookingsController.cs",
+              "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\Controllers\\BookingsController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Controllers\\BookingsController.cs",
+              "RelativeToolTip": "CarRentalSystem.WebAPI\\Controllers\\BookingsController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAwwFUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-10T14:58:12.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "CarRentalSystem.WebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\CarRentalSystem.WebAPI\\CarRentalSystem.WebAPI\\Program.cs",
               "RelativeToolTip": "CarRentalSystem.WebAPI\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAswD0AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T05:22:14.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-15T07:50:55.389Z"
             }
           ]
         }

@@ -27,7 +27,12 @@ namespace CarRentalSystem.WebAPI.Controllers
                     TotalAmount = b.TotalAmount,
             }).ToListAsync();
 
-            return Ok(bookings);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "",
+                Result = true,
+                Data = bookings
+            });
         }
 
         [HttpGet("{id}")]
@@ -45,16 +50,36 @@ namespace CarRentalSystem.WebAPI.Controllers
 
             if(booking == null)
             {
-                return NotFound(new { message = $"Booking with ID {id} not found." });
+                return NotFound(new ApiResponse<object>
+                {
+                    Message = $"Booking with ID {id} not found.",
+                    Result = false,
+                    Data = null
+                });
             }
-            return Ok(booking);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "",
+                Result = true,
+                Data = booking
+            });
         }
         [HttpPost]
         public async Task<IActionResult> AddBooking([FromBody] CreateBookingDTO dto)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
+            {
+                var firstError = ModelState
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage)
+                    .FirstOrDefault();
+                return BadRequest(new ApiResponse<object>
+                {
+                    Message = "",
+                    Result = false,
+                    Data = null
+                });
+            }
             var booking = new Booking()
             {
                 CarId = dto.CarId,
@@ -65,7 +90,12 @@ namespace CarRentalSystem.WebAPI.Controllers
             };
             _context.Bookings.Add(booking);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetBooking), new { id = booking.Id}, booking);
+            return Ok(new ApiResponse<object>
+            {
+                Message = "Booking created successfully.",
+                Result = true,
+                Data = booking
+            });
         }
 
         [HttpDelete("{id}")]
@@ -74,12 +104,22 @@ namespace CarRentalSystem.WebAPI.Controllers
             var booking = await _context.Bookings.FindAsync(id);
             if(booking == null)
             {
-                return NotFound(new { message = $"Booking with ID {id} not found." });
+                return NotFound(new ApiResponse<object>
+                {
+                    Message = $"Booking with ID {id} not found.",
+                    Result = false,
+                    Data = null
+                });
             }
 
             _context.Bookings.Remove(booking);
             await _context.SaveChangesAsync();
-            return NoContent();
+            return Ok(new ApiResponse<object>
+            {
+                Message = "Booking deleted successfully.",
+                Result = true,
+                Data = null
+            });
         }
     }
 }

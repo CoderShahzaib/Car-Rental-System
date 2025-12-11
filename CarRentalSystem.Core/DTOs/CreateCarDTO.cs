@@ -26,6 +26,6 @@ namespace CarRentalSystem.Core.DTOs
         [StringLength(20)]
         public string RegistrationNo { get; set; }
 
-        public string Image { get; set; }
+        public string carImage { get; set; }
     }
 }

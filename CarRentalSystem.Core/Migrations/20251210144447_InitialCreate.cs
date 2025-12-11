@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CarRentalSystem.WebAPI.Migrations
+namespace CarRentalSystem.Core.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -63,7 +63,7 @@ namespace CarRentalSystem.WebAPI.Migrations
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Year = table.Column<int>(type: "int", nullable: false),
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DailyRate = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    DailyRate = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
                     RegistrationNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },

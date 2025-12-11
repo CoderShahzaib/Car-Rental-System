@@ -3,8 +3,8 @@ using CarRentalSystem.Core.Identity;
 using CarRentalSystem.Core.ServiceContracts;
 using CarRentalSystem.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,15 +13,13 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        sql => sql.MigrationsAssembly("CarRentalSystem.WebAPI")
+        builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 
 builder.Services.AddTransient<IJwtService, JwtService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Identity
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
     options.Password.RequiredLength = 8;
@@ -32,6 +30,11 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 })
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
 
 // CORS
 builder.Services.AddCors(options =>
@@ -46,26 +49,21 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// 🌍 Important: Configure Render's dynamic PORT
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-app.Urls.Add($"http://*:{port}");
-
-// Middleware
-if (!app.Environment.IsDevelopment())
+// Remove PORT Logic – IIS handles port
+if (builder.Environment.IsDevelopment())
 {
-    app.UseHsts();
+    app.UseDeveloperExceptionPage();
 }
+// Swagger
+app.UseSwagger();
+app.UseSwaggerUI();
 
-// ❌ Remove HTTPS redirection (Render handles HTTP)
-app.UseStaticFiles();
+app.UseHttpsRedirection();
+
 app.UseRouting();
 app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
-
-// ✅ Always keep Swagger on for testing on Render
-app.UseSwagger();
-app.UseSwaggerUI();
 
 app.MapControllers();
 
