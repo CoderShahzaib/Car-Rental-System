@@ -21,3 +21,6 @@ node_modules/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Others
+appsettings.*.json   # optional if you want to hide environment configs
